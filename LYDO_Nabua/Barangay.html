@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Partners - LYDO Nabua</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #333;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Navbar Styles from index.html */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 5%;
+            background-color: #333; /* Added solid background */
+            width: 100%;
+            z-index: 10;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo-item {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-image {
+            height: 70px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .site-title {
+            color: #fff;
+            font-size: 0.9rem;
+            line-height: 1.3;
+            margin-left: 1rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #f0c040;
+        }
+
+        .menu-toggle {
+            display: none;
+            color: #fff;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Logo Page Content Styles */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        header.page-header {
+            text-align: center;
+            margin-bottom: 50px;
+            padding-top: 20px;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: #f0c040;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            color: #fff;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .logos-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 30px;
+        }
+        
+        .logo-item {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 120px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+        
+        .logo-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+        }
+        
+        .logo-placeholder {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #bdc3c7;
+            font-weight: bold;
+            border: 2px dashed #ecf0f1;
+            border-radius: 4px;
+        }
+
+        /* Footer styles */
+        .footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+
+        .footer p {
+            margin-bottom: 1rem;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-links a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            color: #f0c040;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 1200px) {
+            .logos-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .logos-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                right: 0;
+                background-color: #333;
+                flex-direction: column;
+                padding: 1rem 0;
+                text-align: center;
+            }
+            .nav-links a {
+                padding: 0.5rem 0;
+            }
+            .menu-toggle {
+                display: block;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .logos-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .logo-item {
+                height: 100px;
+            }
+
+            .logo-item {
+                background-color: #fff;
+                border-radius: 8px;
+                padding: 15px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100px;
+                width: 100px;
+                box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+                transition: transform 0.3s, box-shadow 0.3s;
+                cursor: pointer;
+            }
+
+            .logo-image {
+                max-width: 80%;
+                max-height: 80%;
+                object-fit: contain;
+                transition: transform 0.3s ease;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo-container">
+                <div class="logo-item">
+                    <img src="logo/Nabua_1.png" alt="Nabua Municipality Logo" class="logo-image">
+                </div>
+                <div class="logo-item">
+                    <img src="logo/Lydo_1.jpg" alt="YD Logo" class="logo-image">
+                </div>
+                <div class="site-title">
+                    Republic of the Philippines<br>
+                    Municipality of Nabua<br>
+                    Province of Camarines Sur
+                </div>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="contact.html">Contact</a>
+                <a href="#">Event</a>
+            </div>
+            <div class="menu-toggle" id="mobile-menu">☰</div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <header class="page-header">
+            <h1>Our Trusted Barangay</h1>
+            <p class="subtitle">We're proud to collaborate with these 42 amazing barangay that have helped LYDO Nabua grow and innovate in providing municipal services.</p>
+        </header>
+        
+        <div class="logos-grid">
+            <!-- 42 Logo Placeholders -->
+            <div class="logo-item">
+                <img src="logo/Angustia.jpg" alt="Angustia" class="logo-image">
+            </div>
+            <div class="logo-item">
+                <img src="logo/Antipolo Old.jpg" alt="Antipolo Old" class="logo-image">
+            </div>
+            <div class="logo-item">
+                <img src="logo/Antipolo Young.jpg" alt="Antipolo Young" class="logo-image">
+            </div>
+            <div class="logo-item">
+                <img src="logo/Aro-aldao.jpg" alt="Aro-aldao" class="logo-image">
+            </div>
+            <div class="logo-item">
+                <img src="logo/Bustrac.jpg" alt="Bustrac" class="logo-image">
+            </div>
+            <div class="logo-item">
+                <img src="logo/Dolorosa.jpg" alt="Dolorosa" class="logo-image">
+            </div>
+            <div class="logo-item">
+                <img src="logo/Duran.jpg" alt="Duran" class="logo-image">
+            </div>
+            <div class="logo-item">
+                <img src="logo/Inapatan.jpg" alt="Inapatan" class="logo-image">
+            </div>
+            <div class="logo-item">
+                <img src="logo/La Opinion.jpg" alt="La Opinion" class="logo-image">
+            </div>
+            <div class="logo-item">
+                <img src="logo/La Purisima.jpg" alt="La Purisima" class="logo-image">
+            </div>
+            <div class="logo-item">
+                <img src="logo/Lourdes Old.jpg" alt="Lourdes Old" class="logo-image">
+            </div>
+            <div class="logo-item">
+                <img src="logo/Antipolo Young.jpg" alt="Antipolo Young" class="logo-image">
+            </div>
+            <div class="logo-item">
+                <img src="logo/Malawag.jpg" alt="Malawag" class="logo-image">
+            </div>
+            <div class="logo-item">
+                <img src="logo/Paloyon Oriental.jpg" alt="Paloyon Oriental" class="logo-image">
+            </div>
+            <div class="logo-item">
+                <img src="logo/Paloyon Proper.jpg" alt="Paloyon Proper" class="logo-image">
+            </div>
+            <div class="logo-item">
+                <img src="logo/Salvacion Que Gatos.jpg" alt="Salvacion Que Gatos" class="logo-image">
+            </div>
+            <div class="logo-item">
+                <img src="logo/San Antonio Ogbon.jpg" alt="San Antonio Ogbon" class="logo-image">
+            </div>
+            <div class="logo-item">
+                <img src="logo/San Antonio Poblacion.jpg" alt="San Antonio Poblacion" class="logo-image">
+            </div>
+            <div class="logo-item">
+                <img src="logo/San Esteban.jpg" alt="San Esteban" class="logo-image">
+            </div>
+            <div class="logo-item">
+                <img src="logo/San Francisco.jpg" alt="San Francisco" class="logo-image">
+            </div>
+            <div class="logo-item">
+                <img src="logo/San Isidro Inapatan.jpg" alt="San Isidro Inapatan" class="logo-image">
+            </div>
+            <div class="logo-item">
+                <img src="logo/San Isidro Poblacion.jpg" alt="San Isidro Poblacion" class="logo-image">
+            </div>
+            <div class="logo-item">
+                <img src="logo/San Jose.jpg" alt="San Jose" class="logo-image">
+            </div>
+            <div class="logo-item">
+                <img src="logo/San Juan.jpg" alt="San Juan" class="logo-image">
+            </div>
+            <div class="logo-item">
+                <img src="logo/San Luis.jpg" alt="San Luis" class="logo-image">
+            </div>
+            <div class="logo-item">
+                <img src="logo/San Miguel.jpg" alt="San Miguel" class="logo-image">
+            </div>
+            <div class="logo-item">
+                <img src="logo/San Nicolas.jpg" alt="San Nicolas" class="logo-image">
+            </div>
+            <div class="logo-item">
+                <img src="logo/San Roque Madawon.jpg" alt="San Roque Madawon" class="logo-image">
+            </div>
+            <div class="logo-item">
+                <img src="logo/San Roque Poblacion.jpg" alt="San Roque Poblacion" class="logo-image">
+            </div>
+            <div class="logo-item">
+                <img src="logo/San Roque Sagumay.jpg" alt="San Roque Sagumay" class="logo-image">
+            </div>
+            <div class="logo-item">
+                <img src="logo/San Vicente Gorong-Gorong.jpg" alt="San Vicente Gorong-Gorong" class="logo-image">
+            </div>
+            <div class="logo-item">
+                <img src="logo/San Vicente Ogbon.jpg" alt="San Vicente Ogbon" class="logo-image">
+            </div>
+            <div class="logo-item">
+                <img src="logo/Santiago Old.jpg" alt="Santiago Old" class="logo-image">
+            </div>
+            <div class="logo-item">
+                <img src="logo/Santiago Young.jpg" alt="Santiago Young" class="logo-image">
+            </div>
+            <div class="logo-item">
+                <img src="logo/Sta. Barbara.jpg" alt="San Barbara" class="logo-image">
+            </div>
+            <div class="logo-item">
+                <img src="logo/Sta. Cruz.jpg" alt="Sta. Cruz" class="logo-image">
+            </div>
+            <div class="logo-item">
+                <img src="logo/Sta. Elena Baras.jpg" alt="Sta. Elena Baras" class="logo-image">
+            </div>
+            <div class="logo-item">
+                <img src="logo/Sta. Lucia.jpg" alt="Sta. Luis" class="logo-image">
+            </div>
+            <div class="logo-item">
+                <img src="logo/Sto. Domingo.jpg" alt="Sto. Domingo" class="logo-image">
+            </div>
+            <div class="logo-item">
+                <img src="logo/Tandaay.jpg" alt="Tandaay" class="logo-image">
+            </div>
+            <div class="logo-item">
+                <img src="logo/Topas Proper.jpg" alt="Topas Proper" class="logo-image">
+            </div>
+            <div class="logo-item">
+                <img src="logo/Topas Sogod.jpg" alt="Topas Sogod" class="logo-image">
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <p>&copy; 2025 LYDO Nabua. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Simple mobile menu toggle
+        document.getElementById('mobile-menu').addEventListener('click', function() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+        });
+    </script>
+</body>
+</html>

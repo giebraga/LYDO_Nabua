@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - LYDO Nabua</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/api/placeholder/1920/1080') no-repeat center center/cover;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 5%;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            z-index: 10;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo-item {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-image {
+            height: 70px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .site-title {
+            color: #fff;
+            font-size: 0.9rem;
+            line-height: 1.3;
+            margin-left: 1rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+            
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #f0c040;
+        }
+        
+        .login-container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            width: 400px;
+            animation: fadeIn 0.8s forwards;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        
+        .form-group {
+            margin-bottom: 15px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+        }
+        
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+            transition: border-color 0.3s;
+        }
+        
+        input[type="text"]:focus,
+        input[type="password"]:focus {
+            border-color: #f0c040;
+            outline: none;
+        }
+        
+        .login-button {
+            width: 100%;
+            padding: 12px;
+            background-color: #f0c040;
+            color: #333;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            text-transform: uppercase;
+            transition: background-color 0.3s;
+        }
+        
+        .login-button:hover {
+            background-color: #e0b030;
+        }
+        
+        .error-message {
+            color: #ff3333;
+            margin-top: 15px;
+            text-align: center;
+            display: none;
+        }
+        
+        .form-footer {
+            text-align: center;
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.9rem;
+        }
+        
+        .form-footer a {
+            color: #f0c040;
+            text-decoration: none;
+        }
+        
+        .form-footer a:hover {
+            text-decoration: underline;
+        }
+
+        .menu-toggle {
+            display: none;
+            color: #fff;
+            font-size: 5.5rem;
+            cursor: pointer;
+        }
+
+        .menu-toggle svg {
+            width: 80px; /* Increased from 24px to 80px */
+            height: 80px; /* Increased from 24px to 80px */
+            stroke: #fff;
+        }
+
+        @media screen and (max-width: 768px) {
+            .login-container {
+                width: 90%;
+                max-width: 400px;
+            }
+            .nav-links {
+                display: none;
+            }
+            .menu-toggle {
+                display: block;
+                color: #fff;
+                font-size: 5.5rem;
+                cursor: pointer;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo-container">
+            <div class="logo-item">
+                <img src="logo/Nabua_1.png" alt="Nabua Municipality Logo" class="logo-image">
+            </div>
+            <div class="logo-item">
+                <img src="logo/Lydo_1.jpg" alt="YD Logo" class="logo-image">
+            </div>
+            <div class="site-title">
+                Republic of the Philippines<br>
+                Municipality of Nabua<br>
+                Province of Camarines Sur
+            </div>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">🏠︎</a>
+        </div>
+        <div class="menu-toggle" id="mobile-menu">🏠︎</div>
+    </nav>
+
+    <div class="login-container">
+        <h2>Login to LYDO Nabua</h2>
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit" class="login-button">Login</button>
+            <div id="errorMessage" class="error-message">Invalid username or password</div>
+            <div class="form-footer">
+                <a href="#">Forgot Password?</a>
+                <a href="#">Create Account</a>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu').addEventListener('click', function() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+        });
+
+        // Login form validation
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+    
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            const errorMessage = document.getElementById('errorMessage');
+    
+            // This is a simple validation for demonstration
+            // In a real application, you would check credentials against a database
+            if (username === "admin" && password === "password123") {
+                // Successful login - redirecting to Barangay.html instead of index.html
+                alert("Login successful! Redirecting to Barangay page.");
+                window.location.href = "Barangay.html"; 
+            } else {
+                // Failed login
+                errorMessage.style.display = "block";
+                setTimeout(() => {
+                     errorMessage.style.display = "none";
+                }, 3000);
+            }
+    
+            return false;
+        });
+    </script>
+</body>
+</html>
